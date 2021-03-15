@@ -12,6 +12,13 @@ And for Youtube still under development!.
 
 for now i just make Webscrapping to all website ( i hope )
 
+
+# NEWS! <br />
+I have been added some random topic for Wiki. 
+in wikipedia there's bunch of topic you can search 
+so you as user can choose which topic you want to generate and then there's a SubTopic
+in here SubTopic will Randomly Choose and then show it to you. Loop Forever.
+
 # Requirement to use this<br />
 1.Python8.5<br />
 2.pip python<br />
