@@ -46,7 +46,24 @@ class Topic:
             MathematicsAndAbstractions()
         elif self.search == '6':
             os.system('cls')
-            NaturalSciencesAndNature()       
+            NaturalSciencesAndNature()      
+        elif self.search == '7':
+            os.system('cls')
+            PeopleAndSelf()
+        elif self.search == '8':
+            os.system('cls')
+            PhilosophyAndThinking()
+        elif self.search == '9':
+            os.system('cls')
+            #Religion()
+            print('Not Yet!')
+            self.GenTop()
+        elif self.search == '10':
+            os.system('cls')
+            SocialSciencesAndSociety()
+        elif self.search == '11':
+            os.system('cls')
+            TechnologyAndAppliedSciences()            
         else:
             print('Bye')
             sys.exit()
@@ -69,7 +86,11 @@ class ArtCulture(WebScrap):
         global lst
         global content
         global base
-        lst = ["Classical studies","Cooking","Critical theory","Hobbies","Literature"] 
+        lst = ["Classical studies",
+               "Cooking",
+               "Critical theory",
+               "Hobbies",
+               "Literature"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -82,7 +103,10 @@ class ArtCulture(WebScrap):
         global lst
         global content
         global base
-        lst = ["Fiction","Game","Poetry","Sports"] 
+        lst = ["Fiction",
+               "Game",
+               "Poetry",
+               "Sports"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -95,7 +119,11 @@ class ArtCulture(WebScrap):
         global lst
         global content
         global base
-        lst = ["Dance","Film","Music","Opera","Anime"] 
+        lst = ["Dance",
+               "Film",
+               "Music",
+               "Opera",
+               "Anime"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -108,7 +136,13 @@ class ArtCulture(WebScrap):
         global lst
         global content
         global base
-        lst = ["Architecture","Crafts","Drawing","Painting","Photography","Sculpture","Typography"] 
+        lst = ["Architecture",
+               "Crafts",
+               "Drawing",
+               "Painting",
+               "Photography",
+               "Sculpture",
+               "Typography"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -126,7 +160,10 @@ class HealthAndFitness(WebScrap):
         global lst
         global content
         global base
-        lst = ["Health","Exercise","Health Science","Nutritions"] 
+        lst = ["Health",
+               "Exercise",
+               "Health Science",
+               "Nutritions"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -140,7 +177,10 @@ class HistoryAndEvents(WebScrap):
         global lst
         global content
         global base
-        lst = ["History","Classical antiquity","Medieval history","Renaissance"] 
+        lst = ["History",
+               "Classical antiquity",
+               "Medieval history",
+               "Renaissance"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -154,7 +194,15 @@ class MathematicsAndAbstractions(WebScrap):
         global lst
         global content
         global base
-        lst = ["Mathematics","Arithmetic","Algebra","Calculus","Discrete mathematics","Geometry","Trigonometry","Logic","Statistics"] 
+        lst = ["Mathematics",
+               "Arithmetic",
+               "Algebra",
+               "Calculus",
+               "Discrete mathematics",
+               "Geometry",
+               "Trigonometry",
+               "Logic",
+               "Statistics"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -185,7 +233,11 @@ class NaturalSciencesAndNature(WebScrap):
         global lst
         global content
         global base
-        lst = ["Animals","Biochemistry","Botany","Ecology","Zoology"] 
+        lst = ["Animals",
+               "Biochemistry",
+               "Botany",
+               "Ecology",
+               "Zoology"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -198,7 +250,10 @@ class NaturalSciencesAndNature(WebScrap):
         global lst
         global content
         global base
-        lst = ["Astronomy","Chemistry","Earth sciences","Physics Fractions"] 
+        lst = ["Astronomy",
+               "Chemistry",
+               "Earth sciences",
+               "Physics Fractions"] 
         self.scrap_url = scrap_url
         self.res = res
         self.soup = soup
@@ -206,6 +261,162 @@ class NaturalSciencesAndNature(WebScrap):
         content = random.choice(lst)
         base = "https://en.wikipedia.org/wiki/{}"
         WebScrap.__init__(self)          
+
+class PeopleAndSelf(WebScrap):
+    def __init__(self,scrap_url='https://en.wikipedia.org/wiki/{}',res='',soup='None',wiki='None'):
+        global lst
+        global content
+        global base
+        lst = ["People",
+               "Self",
+               "Biology",
+               "Psychology",
+               "Relationships"]
+        self.scrap_url = scrap_url
+        self.res = res
+        self.soup = soup
+        self.wiki = wiki        
+        content = random.choice(lst)
+        base = "https://en.wikipedia.org/wiki/{}"
+        WebScrap.__init__(self)  
+
+
+class PhilosophyAndThinking(WebScrap):
+    def __init__(self,scrap_url='https://en.wikipedia.org/wiki/{}',res='',soup='None',wiki='None'):
+        global lst
+        global content
+        global base
+        lst = ["Philosophy",
+               "Philosophical theories",
+               "Humanism",
+               "Logic",
+               "Thinking",
+               "Transhumanism"]
+        self.scrap_url = scrap_url
+        self.res = res
+        self.soup = soup
+        self.wiki = wiki        
+        content = random.choice(lst)
+        base = "https://en.wikipedia.org/wiki/{}"
+        WebScrap.__init__(self)  
+
+class Religion(WebScrap):
+    pass 
+
+class SocialSciencesAndSociety(WebScrap):
+    def __init__(self):
+        pass
+    
+    def Social_sciences(self,scrap_url='https://en.wikipedia.org/wiki/{}',res='',soup='None',wiki='None'):
+        global lst
+        global content
+        global base
+        lst = ["Archaeology",
+               "Critical theory",
+               "Economics",
+               "Geography",
+               "History",
+               "Linguistics",
+               "Law",
+               "Political science",
+               "Psychology",
+               "Sociology",
+               "Relationships"]
+        self.scrap_url = scrap_url
+        self.res = res
+        self.soup = soup
+        self.wiki = wiki        
+        content = random.choice(lst)
+        base = "https://en.wikipedia.org/wiki/{}"
+        WebScrap.__init__(self)  
+    
+    def Society(self,scrap_url='https://en.wikipedia.org/wiki/{}',res='',soup='None',wiki='None'):
+        global lst
+        global content
+        global base
+        lst = ["Community",
+               "Criminal justice",
+               "Education",
+               "Firefighting",
+               "Politics",
+               "Public affairs"]
+        self.scrap_url = scrap_url
+        self.res = res
+        self.soup = soup
+        self.wiki = wiki        
+        content = random.choice(lst)
+        base = "https://en.wikipedia.org/wiki/{}"
+        WebScrap.__init__(self)         
+
+    def Business(self,scrap_url='https://en.wikipedia.org/wiki/{}',res='',soup='None',wiki='None'):
+        global lst
+        global content
+        global base
+        lst = ["Economics",
+               "Finance",
+               "Management",
+               "Marketing"]
+        self.scrap_url = scrap_url
+        self.res = res
+        self.soup = soup
+        self.wiki = wiki        
+        content = random.choice(lst)
+        base = "https://en.wikipedia.org/wiki/{}"
+        WebScrap.__init__(self)    
+
+class TechnologyAndAppliedSciences(WebScrap):
+    def __init__(self):
+        user = input("> ")
+        while user not in ['q','quit']:
+            if user == '1':
+                print('Not Yet!')
+                print('Automaticly go to SubTopic 2')
+                self.TechScience()
+            elif user == '2':
+                self.TechScience()
+            else:
+                print('Bye')
+                sys.exit()
+            
+    
+    def TechScience(self,scrap_url='https://en.wikipedia.org/wiki/{}',res='',soup='None',wiki='None'):
+        global lst
+        global content
+        global base
+        lst = ["Aerospace",
+               "Artificial intelligence",
+               "Agriculture",
+               "Architecture",
+               "Big Science",
+               "Biotechnology","Communication",
+               "Computer science",
+               "Information technology",
+               "Internet",
+               "Programming",
+               "Software engineering",
+               "Energy development",
+               "Engineering",
+               "Firefighting",
+               "Health science","Industry",
+               "Library and information science",
+               "Machines",
+               "Management",
+               "Manufacturing",
+               "Military",
+               "Nutrition","Permaculture",
+               "Robotics","Space exploration",
+               "Telecommunication",
+               "Internet",
+               "Transport",
+               "Vehicles"]
+        self.scrap_url = scrap_url
+        self.res = res
+        self.soup = soup
+        self.wiki = wiki        
+        content = random.choice(lst)
+        base = "https://en.wikipedia.org/wiki/{}"
+        WebScrap.__init__(self)          
+
 
 if __name__ == '__main__':
     Top = Topic()
